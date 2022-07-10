@@ -1,0 +1,28 @@
+.badge {
+  position: absolute;
+  width: auto;
+  min-width: 60px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  box-shadow: 0 3px 5px #ccc;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  font-family: "Nunito-Bold";
+  font-size: 14px;
+  transition: all 0.2s;
+  color: #333;
+}
+
+.badge:hover {
+  box-shadow: 0 5px 20px #ccc;
+  cursor: pointer;
+}
+
+.badgeImage {
+  width: 25px;
+  height: auto;
+  margin-right: 10px;
+}

@@ -1,8 +1,11 @@
+import Badge from '../../../components/Badge'
 import Button from '../../../components/Button'
 import SocialLogo from '../../../components/SocialLogo'
 import styles from '../styles/profile.module.css'
 
 const profileImage = require("../../../assets/images/profile.png")
+const reactImage = require("../../../assets/images/react.png")
+const nodeImage = require("../../../assets/images/node.png")
 
 const Profile = () => {
   return (
@@ -26,7 +29,7 @@ const Profile = () => {
         </div>
 
         <div className={styles.profileSocial}>
-          <SocialLogo />
+          <SocialLogo style={{ boxShadow: "0 3px 5px #ccc" }} />
         </div>
       </div>
 
@@ -35,6 +38,33 @@ const Profile = () => {
           className={styles.profileImage}
           alt='kombou dilane'
           src={profileImage}
+        />
+
+        <Badge
+          title="Frontend Developer"
+          style={{
+            left: -50,
+            top: 30
+          }}
+          source={reactImage}
+        />
+
+        <Badge
+          title="Backend Developer"
+          style={{
+            right: 0,
+            bottom: 40
+          }}
+          source={nodeImage}
+        />
+
+        <Badge
+          title="Mobile Developer"
+          style={{
+            left: -100,
+            bottom: 90
+          }}
+          source={reactImage}
         />
       </div>
     </section>
