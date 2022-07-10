@@ -1,0 +1,11 @@
+.footer {
+  width: calc(100% - 400px);
+  height: 60px;
+  padding-inline: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #535787;
+  color: #fff;
+  font-family: "Nunito-Bold";
+}

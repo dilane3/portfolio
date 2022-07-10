@@ -1,0 +1,23 @@
+.btn {
+  width: auto;
+  padding-inline: 15px;
+  padding-block: 5px;
+  color: #fff;
+  border-radius: 50px;
+  border: 0;
+  font-family: "Nunito-Bold";
+  cursor: pointer;
+}
+
+.btnOutline {
+  color: inherit;
+  border-width: 2px;
+  border-style: solid;
+  transition: all 0.2s;
+  background-color: transparent;
+}
+
+.btnOutline:hover {
+  background-color: inherit;
+  background-color: #eee;
+}
