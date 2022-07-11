@@ -1,0 +1,30 @@
+.contactItemContainer {
+  width: 250px;
+  /* min-width: 100px; */
+  border-radius: 10px;
+  border: 1px solid #eee;
+  margin-bottom: 20px;
+  background-color: #fff;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 20px;
+}
+
+.contactItemImage {
+  width: 50px;
+  height: auto;
+  margin-right: 20px;
+  margin-left: 10px;
+}
+
+.contactItemText {
+  font-size: 18px;
+  font-family: "Nunito-Bold";
+}
+
+@media screen and (max-width: 400px) {
+  .contactItemContainer {
+    width: calc(100% - 40px);
+  }
+}

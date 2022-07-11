@@ -3,6 +3,40 @@
   padding-inline: 200px;
 }
 
+.contactMeHeading {
+  font-size: 40px;
+  font-family: "Nunito-Bold";
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.contactMeDescription {
+  display: block;
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.contactMeContent {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding-block: 30px;
+}
+
+.contactMeFirstSection {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.contactMeSecondSection {
+  width: 50%;
+}
+
 @media screen and (max-width: 1300px) {
   .contactMeSection {
     padding-inline: 150px;
@@ -21,5 +55,15 @@
   .contactMeSection {
     padding-inline: 20px;
     width: calc(100% - 40px);
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .contactMeSecondSection {
+    display: none;
+  }
+
+  .contactMeFirstSection {
+    width: 100%;
   }
 }

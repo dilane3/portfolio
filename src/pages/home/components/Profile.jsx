@@ -23,7 +23,7 @@ const Profile = () => {
           <div>
             <Button
               color="secondary"
-              style={{ marginTop: 20 }}
+              style={{ marginTop: 20, paddingInline: 25, paddingBlock: 8 }}
             >Hire me</Button>
           </div>
         </div>

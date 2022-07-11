@@ -1,3 +1,4 @@
+import GoUp from '../../components/GoUp'
 import ContactMe from './components/ContactMe'
 import Footer from './components/Footer'
 import Navbar from './components/Navbar'
@@ -15,6 +16,8 @@ const Home = () => {
       <Skills />
       <Projects />
       <ContactMe />
+
+      <GoUp />
 
       <Footer />
     </section>
