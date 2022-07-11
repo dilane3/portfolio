@@ -1,0 +1,65 @@
+.projectItem {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  height: auto;
+  min-height: 400px;
+  background-color: rgb(247, 247, 247);
+  box-shadow: 0 3px 3px #c4c4c4;
+  transition: all 0.3s ease-in-out;
+  border: 1px solid #f8f8f8;
+}
+
+.projectItem:hover {
+  transform: scale(1.05);
+  box-shadow: 0 3px 15px #c4c4c4;
+}
+
+.projectItemImageContainer {
+  width: 100%;
+  height: 200px;
+}
+
+.projectItemImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+
+.projectItemContent {
+  width: calc(100% - 40px);
+  height: auto;
+  padding-inline: 20px;
+}
+
+.projectItemTitle {
+  font-size: 24px;
+  font-family: "Nunito-Bold";
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.projectItemDescription {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.projectItemFooter {
+  width: calc(100% - 40px);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: auto;
+  padding-inline: 20px;
+  padding-bottom: 20px;
+}
+
+.projectItemFooterView {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: var(--secondary-color);
+  cursor: pointer;
+}
