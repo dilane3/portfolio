@@ -14,10 +14,16 @@
   width: 35px;
   height: 35px;
   border-radius: 100px;
-  border: 1px solid var(--secondary-color);
+  /* border: 1px solid var(--secondary-color); */
+  box-shadow: 0 2px 5px #ccc;
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 0;
   background-color: #fff;
+}
+
+.techItemImage {
+  width: 20px;
+  height: auto;
 }

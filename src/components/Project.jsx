@@ -4,7 +4,13 @@ import styles from './styles/project.module.css'
 
 const projectImage = require("../assets/images/profile.png")
 
-const ProjectItem = () => {
+const ProjectItem = ({ data }) => {
+  const {
+    name: projectName,
+    description: projectDescription,
+    technologies: projectTechnologies,
+  } = data
+
   return (
     <div className={styles.projectItem}>
       <div className={styles.projectItemImageContainer}>
@@ -15,13 +21,13 @@ const ProjectItem = () => {
       </div>
 
       <div className={styles.projectItemContent}>
-        <h1 className={styles.projectItemTitle}>Tundah</h1>
+        <h1 className={styles.projectItemTitle}>{projectName}</h1>
 
-        <span className={styles.projectItemDescription}>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
+        <span className={styles.projectItemDescription}>{projectDescription}</span>
       </div>
 
       <div className={styles.projectItemFooter}>
-        <ProjectTechList />
+        <ProjectTechList data={projectTechnologies} />
 
         <span className={styles.projectItemFooterView}>
           View

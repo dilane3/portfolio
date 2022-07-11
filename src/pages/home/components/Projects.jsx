@@ -3,6 +3,8 @@ import Button from '../../../components/Button'
 import ProjectItem from '../../../components/Project'
 import styles from '../styles/projects.module.css'
 
+const PROJECTS_DATA = require("../../../storage/projects.json").projects
+
 const Projects = () => {
   return (
     <section className={styles.projectsSection}>
@@ -14,7 +16,13 @@ const Projects = () => {
       </span>
 
       <div className={styles.projectsList}>
-        <ProjectItem />
+        {
+          PROJECTS_DATA.map((project, index) => {
+            return (
+              <ProjectItem key={index} data={project} />
+            )
+          })
+        }
       </div>
 
       <div className={styles.projectsControls}>

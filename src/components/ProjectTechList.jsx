@@ -1,21 +1,26 @@
 import styles from './styles/projectTechList.module.css'
 
-const TechItem = ({ index }) => {
+const TechItem = ({ index, data }) => {
   return (
     <div className={styles.techItem} style={{ marginLeft: 25 * index }}>
-      R
+      <img
+        className={styles.techItemImage}
+        src={require(`../assets/images/skills/${data.image}`)}
+      />
     </div>
   )
 }
 
-const ProjectTechList = () => {
+const ProjectTechList = ({ data }) => {
   return (
     <div className={styles.techList}>
-      <TechItem index={0} />
-      <TechItem index={1} />
-      <TechItem index={2} />
-      <TechItem index={3} />
-      <TechItem index={4} />
+      {
+        data.map((tech, index) => {
+          return (
+            <TechItem key={index} index={index} data={tech} />
+          )
+        })
+      }
     </div>
   )
 }

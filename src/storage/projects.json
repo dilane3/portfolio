@@ -1,0 +1,28 @@
+{
+  "projects": [
+    {
+      "name": "Blooming Game",
+      "description": "A game where you have to manage your money to be able to live a happy life.",
+      "start_date": "2020-01-03",
+      "end_date": "2017-01-06",
+      "status": "ended",
+      "users": [
+        {
+          "name": "Dilane3",
+          "email": "Komboudilane125@gmail.com"
+        }
+      ],
+      "technologies": [
+        {
+          "name": "JavaScript",
+          "image": "js.jpeg"
+        },
+        {
+          "name": "React",
+          "image": "react.png"
+        }
+      ],
+      "images": []
+    }
+  ]
+}
