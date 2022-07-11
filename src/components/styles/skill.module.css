@@ -1,0 +1,59 @@
+.skillItem {
+  position: relative;
+  width: 120px;
+  height: auto;
+  min-height: 150px;
+  border-radius: 7px;
+  border: 1px solid #ccc;
+  padding: 15px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  margin-right: 30px;
+  margin-bottom: 30px;
+}
+
+.skillItem::after {
+  content: "";
+  position: absolute;
+  top: -3px;
+  right: -3px;
+  width: 120px;
+  min-height: 150px;
+  height: auto;
+  border-radius: 7px;
+  padding: 15px;
+  border: 1px solid #ccc;
+  z-index: -1;
+}
+
+.skillItem::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  width: 120px;
+  min-height: 150px;
+  height: auto;
+  border-radius: 7px;
+  padding: 15px;
+  border: 1px solid #ccc;
+  z-index: -1;
+}
+
+.skillImage {
+  width: 60px;
+  height: auto;
+}
+
+.skillName {
+  font-size: 18px;
+  font-family: "Nunito-Bold";
+  margin-top: 20px;
+}
+
+.skillStars {
+  margin-top: auto;
+}

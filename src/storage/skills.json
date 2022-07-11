@@ -1,0 +1,54 @@
+{
+  "skills": [
+    {
+      "name": "HTML",
+      "level": "5",
+      "image": "html.png"
+    },
+    {
+      "name": "CSS",
+      "level": "4",
+      "image": "css.png"
+    },
+    {
+      "name": "JavaScript",
+      "level": "4",
+      "image": "js.jpeg"
+    },
+    {
+      "name": "React",
+      "level": "4",
+      "image": "react.png"
+    },
+    {
+      "name": "NodeJS",
+      "level": "3",
+      "image": "node.png"
+    },
+    {
+      "name": "Express",
+      "level": "3",
+      "image": "express.png"
+    },
+    {
+      "name": "MongoDB",
+      "level": "3",
+      "image": "mongo.jpg"
+    },
+    {
+      "name": "Neo4J",
+      "level": "3",
+      "image": "neo4j.png"
+    },
+    {
+      "name": "MySQL",
+      "level": "3",
+      "image": "mysql.svg"
+    },
+    {
+      "name": "Git",
+      "level": "4",
+      "image": "git.png"
+    }
+  ]
+}

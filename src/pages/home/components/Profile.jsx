@@ -61,8 +61,8 @@ const Profile = () => {
         <Badge
           title="Mobile Developer"
           style={{
-            left: -100,
-            bottom: 90
+            left: -140,
+            bottom: 140
           }}
           source={reactImage}
         />
