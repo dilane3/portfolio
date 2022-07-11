@@ -1,0 +1,15 @@
+.carouselContainer {
+  width: 100%;
+  height: 200px;
+}
+
+.carouselItem {
+  width: 100%;
+  height: 200px;
+}
+
+.carouselItemImage {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}

@@ -57,3 +57,9 @@
 .skillStars {
   margin-top: auto;
 }
+
+@media screen and (max-width: 402px) {
+  .skillItem {
+    margin-right: 0;
+  }
+}

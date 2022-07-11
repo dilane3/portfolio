@@ -1,4 +1,6 @@
 import { VscEye } from 'react-icons/vsc'
+import { splitText } from '../utils/splitText'
+import ImageCarousel from './Carousel'
 import ProjectTechList from './ProjectTechList'
 import styles from './styles/project.module.css'
 
@@ -9,21 +11,24 @@ const ProjectItem = ({ data }) => {
     name: projectName,
     description: projectDescription,
     technologies: projectTechnologies,
+    folder: projectFolder,
+    images: projectImages
   } = data
 
   return (
     <div className={styles.projectItem}>
       <div className={styles.projectItemImageContainer}>
-        <img
+        {/* <img
           className={styles.projectItemImage}
           src={projectImage}
-        />
+        /> */}
+        <ImageCarousel folder={projectFolder} images={projectImages} />
       </div>
 
       <div className={styles.projectItemContent}>
         <h1 className={styles.projectItemTitle}>{projectName}</h1>
 
-        <span className={styles.projectItemDescription}>{projectDescription}</span>
+        <span className={styles.projectItemDescription} title={projectDescription}>{splitText(projectDescription, 80)}</span>
       </div>
 
       <div className={styles.projectItemFooter}>

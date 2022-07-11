@@ -8,6 +8,8 @@
   box-shadow: 0 3px 3px #c4c4c4;
   transition: all 0.3s ease-in-out;
   border: 1px solid #f8f8f8;
+  margin-inline: 10px;
+  margin-bottom: 20px;
 }
 
 .projectItem:hover {
@@ -62,4 +64,16 @@
   align-items: center;
   color: var(--secondary-color);
   cursor: pointer;
+}
+
+@media screen and (max-width: 700px) {
+  .projectItem {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .projectItem {
+    width: 100%;
+  }
 }

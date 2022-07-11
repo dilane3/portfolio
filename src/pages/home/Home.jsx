@@ -1,3 +1,4 @@
+import ContactMe from './components/ContactMe'
 import Footer from './components/Footer'
 import Navbar from './components/Navbar'
 import Profile from './components/Profile'
@@ -13,6 +14,7 @@ const Home = () => {
       <Profile />
       <Skills />
       <Projects />
+      <ContactMe />
 
       <Footer />
     </section>

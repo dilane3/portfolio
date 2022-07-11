@@ -2,7 +2,7 @@ import styles from './styles/projectTechList.module.css'
 
 const TechItem = ({ index, data }) => {
   return (
-    <div className={styles.techItem} style={{ marginLeft: 25 * index }}>
+    <div className={styles.techItem} style={{ marginLeft: 25 * index }} title={data.name}>
       <img
         className={styles.techItemImage}
         src={require(`../assets/images/skills/${data.image}`)}

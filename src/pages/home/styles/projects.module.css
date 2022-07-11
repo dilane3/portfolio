@@ -20,7 +20,7 @@
 
 .projectsList {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   flex-wrap: wrap;
   padding-block: 30px;
   width: 100%;
@@ -52,5 +52,11 @@
   .projectsSection {
     padding-inline: 20px;
     width: calc(100% - 40px);
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .projectsList {
+    justify-content: center;
   }
 }
