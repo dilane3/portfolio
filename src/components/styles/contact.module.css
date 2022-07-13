@@ -8,11 +8,11 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  padding: 20px;
+  padding: 10px;
 }
 
 .contactItemImage {
-  width: 50px;
+  width: 30px;
   height: auto;
   margin-right: 20px;
   margin-left: 10px;

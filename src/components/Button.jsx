@@ -1,6 +1,6 @@
 import styles from './styles/button.module.css'
 
-const Button = ({ children, type, color, style }) => {
+const Button = ({ children, type, color, style, onClick }) => {
   return (
     <button
       className={`${styles.btn} ${type === "outline" && styles.btnOutline}`}
@@ -10,6 +10,7 @@ const Button = ({ children, type, color, style }) => {
         color: type === "outline" && `var(--${color}-color)`,
         backgroundColor: type !== "outline" && `var(--${color}-color)`,
       }}
+      onClick={onClick}
     >
       {children}
     </button>

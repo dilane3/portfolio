@@ -7,7 +7,7 @@ const PROJECTS_DATA = require("../../../storage/projects.json").projects
 
 const Projects = () => {
   return (
-    <section className={styles.projectsSection}>
+    <section id="projects" className={styles.projectsSection}>
       <h1 className={styles.projectsHeading}>Projects</h1>
 
       <span className={styles.projectsDescription}>

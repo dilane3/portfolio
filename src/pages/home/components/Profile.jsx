@@ -9,7 +9,7 @@ const nodeImage = require("../../../assets/images/node.png")
 
 const Profile = () => {
   return (
-    <section className={styles.profileContainer}>
+    <section id="home" className={styles.profileContainer}>
       <div className={styles.profileFirstSection}>
         <div className={styles.profilePresentation}>
           <span className={styles.profileGreetings}>Hi, I Am</span>
