@@ -21,7 +21,7 @@ const Skills = () => {
 
       <div className={styles.skillsList}>
         {
-          SKILLS_DATA.map((skill, index) => {
+          SKILLS_DATA.slice(0, 8).map((skill, index) => {
             return (
               <SkillItem key={index} data={skill} />
             )

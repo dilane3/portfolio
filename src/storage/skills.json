@@ -16,6 +16,11 @@
       "image": "js.jpeg"
     },
     {
+      "name": "TypeScript",
+      "level": "2",
+      "image": "typescript.png"
+    },
+    {
       "name": "React",
       "level": "4",
       "image": "react.png"
@@ -49,6 +54,26 @@
       "name": "Git",
       "level": "4",
       "image": "git.png"
+    },
+    {
+      "name": "Docker",
+      "level": 2,
+      "image": "docker.webp"
+    },
+    {
+      "name": "React Native",
+      "level": 3,
+      "image": "react.png"
+    },
+    {
+      "name": "Material UI",
+      "level": 2,
+      "image": "mui.png"
+    },
+    {
+      "name": "Bootstrap",
+      "level": 3,
+      "image": "bootstrap.png"
     }
   ]
 }

@@ -4,14 +4,18 @@ import ModalContext from "../context/modalContext"
 const ModalProvider = ({ children }) => {
   const [open, setOpen] = useState(false)
   const [modalData, setModalData] = useState({
-    modalType: ""
+    modalType: "",
+    modalTitle: "",
+    project: null
   })
 
   // Some handlers
-  const handleOpenModal = (modalType) => {
+  const handleOpenModal = (modalType, modalTitle, project = null) => {
     const modalDataClone = { ...modalData }
 
     modalDataClone.modalType = modalType
+    modalDataClone.modalTitle = modalTitle
+    modalDataClone.project = project
 
     setModalData(modalDataClone)
     setOpen(true)

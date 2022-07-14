@@ -4,12 +4,12 @@ import styles from './styles/carousel.module.css'
 
 const Item = ({ data: image, folder }) => {
   return (
-    <Paper className={styles.carouselItem}>
+    <div className={styles.carouselItem}>
       <img
         className={styles.carouselItemImage}
         src={require(`../assets/images/projects/${folder}/${image}`)}
       />
-    </Paper>
+    </div>
   )
 }
 

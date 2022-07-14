@@ -5,4 +5,97 @@
   transform: translate(-50%, -50%);
   border-radius: 10px;
   padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.modalHeaderTitle,
+.modalMain,
+.modalFooter {
+  width: 100%;
+}
+
+.modalHeaderTitle {
+  margin-top: 0;
+  color: #333;
+}
+
+.modalMain {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  overflow-y: scroll;
+}
+
+.modalContent {
+  width: 100%;
+  height: auto;
+}
+
+.modalFooter {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: auto;
+  justify-self: flex-end;
+}
+
+.imagesContainer {
+  width: 100%;
+  height: auto;
+}
+
+.projectDescription {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+
+.projectDates {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+}
+
+.projectDateItem {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+.projectDateItem > span {
+  margin-left: 10px;
+  font-family: "Nunito-Medium";
+}
+
+.projectDateItem > a {
+  text-decoration: none;
+  margin-left: 10px;
+  color: var(--primary-color);
+  font-size: 16px;
+}
+
+.projectDateValue {
+  font-size: 16px;
+  font-family: "Nunito-Bold";
+  margin-left: 5px;
+  color: #333;
+}
+
+@media screen and (max-width: 900px) {
+  .modalContainer {
+    width: calc(100% - 100px);
+    height: 80%;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .modalContainer {
+    border-radius: 0;
+    width: calc(100% - 40px);
+    height: calc(100% - 38px);
+  }
 }

@@ -20,7 +20,7 @@ const SkillItem = ({ data }) => {
 
       <span className={styles.skillName}>{name}</span>
 
-      <div className={styles.skillStars}>
+      {/* <div className={styles.skillStars}>
         {
           Array(5).fill(0).map((_, index) => {
             return <BsStarFill
@@ -30,7 +30,7 @@ const SkillItem = ({ data }) => {
             />
           })
         }
-      </div>
+      </div> */}
     </div>
   )
 }

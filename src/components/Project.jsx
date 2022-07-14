@@ -1,4 +1,6 @@
+import { useContext } from 'react'
 import { VscEye } from 'react-icons/vsc'
+import ModalContext from '../datamanager/context/modalContext'
 import { splitText } from '../utils/splitText'
 import ImageCarousel from './Carousel'
 import ProjectTechList from './ProjectTechList'
@@ -15,13 +17,11 @@ const ProjectItem = ({ data }) => {
     images: projectImages
   } = data
 
+  const { openModal } = useContext(ModalContext)
+
   return (
     <div className={styles.projectItem}>
       <div className={styles.projectItemImageContainer}>
-        {/* <img
-          className={styles.projectItemImage}
-          src={projectImage}
-        /> */}
         <ImageCarousel folder={projectFolder} images={projectImages} />
       </div>
 
@@ -34,7 +34,7 @@ const ProjectItem = ({ data }) => {
       <div className={styles.projectItemFooter}>
         <ProjectTechList data={projectTechnologies} />
 
-        <span className={styles.projectItemFooterView}>
+        <span className={styles.projectItemFooterView} onClick={() => openModal("SPECIFIC_PROJECT", projectName, data)}>
           View
 
           <VscEye size={20} style={{ marginLeft: 5 }} />
