@@ -32,7 +32,7 @@ const ModalCore = ({ open, onClose }) => {
   return (
     <Modal
       open={open}
-      onClose={onClose}
+    // onClose={onClose}
     >
       <Box
         sx={{
