@@ -48,7 +48,7 @@ const Skills = () => {
 
       <div className={styles.skillsControls}>
         <a
-          href="../../../assets/cv/cv.pdf"
+          href={require("../../../assets/cv/cv.pdf")}
           download={true}
         >
           <Button
