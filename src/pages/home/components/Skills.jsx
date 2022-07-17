@@ -47,9 +47,14 @@ const Skills = () => {
       </div>
 
       <div className={styles.skillsControls}>
-        <Button
-          color="secondary"
-        >Download CV</Button>
+        <a
+          href="../../../assets/cv/cv.pdf"
+          download={true}
+        >
+          <Button
+            color="secondary"
+          >Download CV</Button>
+        </a>
         <Button
           color="secondary"
           type="outline"
