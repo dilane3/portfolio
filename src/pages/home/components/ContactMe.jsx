@@ -1,9 +1,28 @@
+import { useInView } from 'framer-motion'
+import { useContext, useEffect, useRef } from 'react'
 import ContactItem from '../../../components/Contact'
+import NavigationContext from '../../../datamanager/context/navigationContext'
 import styles from '../styles/contactMe.module.css'
 
 const ContactMe = () => {
+  // Get data from the global state
+  const { navigateTo } = useContext(NavigationContext)
+
+  const contactMeRef = useRef()
+  const isInView = useInView(contactMeRef)
+
+  useEffect(() => {
+    if (isInView) {
+      navigateTo("contactMe")
+    }
+  }, [isInView])
+
   return (
-    <section id="contactMe" className={styles.contactMeSection}>
+    <section
+      ref={contactMeRef}
+      id="contactMe"
+      className={styles.contactMeSection}
+    >
       <h1 className={styles.contactMeHeading}>Contact Me</h1>
 
       <span className={styles.contactMeDescription}>

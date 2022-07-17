@@ -24,7 +24,7 @@ const Badge = ({ title, style, source }) => {
       onDragEnd={handleDragEnd}
       whileHover={{ scale: 1.04 }}
       animate={{ x: !isDraging && 0, y: !isDraging && 0 }}
-      transition={{ duration: 1 }}
+      transition={{ duration: 1, type: "spring" }}
       className={styles.badge}
       style={style}
     >

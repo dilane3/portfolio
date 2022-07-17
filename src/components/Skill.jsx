@@ -1,17 +1,31 @@
-import { BsStarFill } from 'react-icons/bs'
 import styles from './styles/skill.module.css'
-
-const reactImage = require("../assets/images/react.png")
+import { motion } from 'framer-motion'
+import { useState } from 'react'
 
 const SkillItem = ({ data }) => {
+  const [isHover, setIsHover] = useState(false)
+
+  // Some handlers
+  const handleHoverStart = () => {
+    setIsHover(true)
+  }
+
+  const handleHoverEnd = () => {
+    setIsHover(false)
+  }
+
   const {
-    level,
     name,
     image
   } = data
 
   return (
-    <div className={styles.skillItem}>
+    <motion.div
+      className={styles.skillItem}
+      // whileHover={{ scale: 1.02 }}
+      onHoverStart={handleHoverStart}
+      onHoverEnd={handleHoverEnd}
+    >
       <img
         className={styles.skillImage}
         alt='tech-logo'
@@ -20,18 +34,15 @@ const SkillItem = ({ data }) => {
 
       <span className={styles.skillName}>{name}</span>
 
-      {/* <div className={styles.skillStars}>
-        {
-          Array(5).fill(0).map((_, index) => {
-            return <BsStarFill
-              size={15}
-              style={{ marginRight: 5 }}
-              color={index < level ? '#ffc107' : '#ccc'}
-            />
-          })
-        }
-      </div> */}
-    </div>
+      <motion.div
+        className={styles.skillItemBefore}
+        animate={{ rotate: isHover ? 10 : 0 }}
+      ></motion.div>
+      <motion.div
+        className={styles.skillItemAfter}
+        animate={{ rotate: isHover ? -5 : 0 }}
+      ></motion.div>
+    </motion.div>
   )
 }
 

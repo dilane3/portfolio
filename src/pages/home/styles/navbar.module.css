@@ -36,6 +36,10 @@
   color: var(--primary-color);
 }
 
+.navbarNavItemActive {
+  color: var(--primary-color);
+}
+
 @media screen and (max-width: 1300px) {
   .navbar {
     padding-inline: 150px;

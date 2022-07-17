@@ -2,14 +2,33 @@ import Badge from '../../../components/Badge'
 import Button from '../../../components/Button'
 import SocialLogo from '../../../components/SocialLogo'
 import styles from '../styles/profile.module.css'
+import { useInView } from 'framer-motion'
+import { useContext, useEffect, useRef } from 'react'
+import NavigationContext from '../../../datamanager/context/navigationContext'
 
 const profileImage = require("../../../assets/images/profile.png")
 const reactImage = require("../../../assets/images/react.png")
 const nodeImage = require("../../../assets/images/node.png")
 
 const Profile = () => {
+  // Get data from the global state
+  const { navigateTo } = useContext(NavigationContext)
+
+  const profileRef = useRef()
+  const isInView = useInView(profileRef)
+
+  useEffect(() => {
+    if (isInView) {
+      navigateTo("home")
+    }
+  }, [isInView])
+
   return (
-    <section id="home" className={styles.profileContainer}>
+    <section
+      ref={profileRef}
+      id="home"
+      className={styles.profileContainer}
+    >
       <div className={styles.profileFirstSection}>
         <div className={styles.profilePresentation}>
           <span className={styles.profileGreetings}>Hi, I Am</span>

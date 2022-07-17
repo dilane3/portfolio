@@ -1,17 +1,35 @@
-import { useContext } from 'react'
+import { useInView } from 'framer-motion'
+import { useContext, useEffect, useRef } from 'react'
 import { BsArrowRight } from 'react-icons/bs'
 import Button from '../../../components/Button'
 import ProjectItem from '../../../components/Project'
 import ModalContext from '../../../datamanager/context/modalContext'
+import NavigationContext from '../../../datamanager/context/navigationContext'
 import styles from '../styles/projects.module.css'
 
 const PROJECTS_DATA = require("../../../storage/projects.json").projects
 
 const Projects = () => {
+  // Get data from the global state
   const { openModal } = useContext(ModalContext)
+  const { navigateTo } = useContext(NavigationContext)
+
+  const projectsRef = useRef()
+  const isInView = useInView(projectsRef)
+
+  useEffect(() => {
+    if (isInView) {
+      navigateTo("projects")
+    }
+  }, [isInView])
+
 
   return (
-    <section id="projects" className={styles.projectsSection}>
+    <section
+      ref={projectsRef}
+      id="projects"
+      className={styles.projectsSection}
+    >
       <h1 className={styles.projectsHeading}>Projects</h1>
 
       <span className={styles.projectsD4escription}>
