@@ -4,6 +4,7 @@ import ModalCore from '../../components/modals/ModalCore'
 import ModalContext from '../../datamanager/context/modalContext'
 import ContactMe from './components/ContactMe'
 import Footer from './components/Footer'
+import MobileNavbar from './components/MobileNavbar'
 import Navbar from './components/Navbar'
 import Profile from './components/Profile'
 import Projects from './components/Projects'
@@ -16,6 +17,7 @@ const Home = () => {
   return (
     <section className={styles.container}>
       <Navbar />
+      <MobileNavbar />
 
       <Profile />
       <Skills />
