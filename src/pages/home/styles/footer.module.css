@@ -10,6 +10,11 @@
   font-family: "Nunito-Bold";
 }
 
+.footerLogo {
+  width: 40px;
+  height: auto;
+}
+
 @media screen and (max-width: 1300px) {
   .footer {
     padding-inline: 150px;

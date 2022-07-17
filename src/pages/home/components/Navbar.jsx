@@ -34,7 +34,7 @@ const Navbar = () => {
             "&:hover": {
               cursor: "pointer"
             },
-            "@media screen and (min-width: 576px)": {
+            "@media screen and (min-width: 765px)": {
               display: "none"
             }
           }}
@@ -55,7 +55,7 @@ const Navbar = () => {
             className={styles.navbarLogoImage}
           />
 
-          <Typography sx={{ ml: 1, fontFamily: "Nunito-Bold", fontSize: 18 }}>Dilane3</Typography>
+          <Typography sx={{ ml: 1, fontFamily: "Nunito-Bold", fontSize: 18, color: "#3e4bff" }}>Dilane3</Typography>
         </Box>
       </div>
 
