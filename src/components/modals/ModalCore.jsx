@@ -36,8 +36,6 @@ const ModalCore = ({ open, onClose }) => {
     >
       <Box
         sx={{
-          width: 800,
-          height: 500,
           backgroundColor: "#fff"
         }}
         className={styles.modalContainer}
