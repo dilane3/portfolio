@@ -32,7 +32,7 @@
 .projectItemContent {
   width: calc(100% - 40px);
   height: auto;
-  padding-inline: 20px;
+  padding: 0 20px;
 }
 
 .projectItemTitle {
@@ -54,8 +54,7 @@
   flex-direction: row;
   justify-content: space-between;
   margin-top: auto;
-  padding-inline: 20px;
-  padding-bottom: 20px;
+  padding: 0 20px 20px 20px;
 }
 
 .projectItemFooterView {

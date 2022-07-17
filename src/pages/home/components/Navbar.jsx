@@ -2,7 +2,6 @@ import { useContext, useState } from 'react'
 import Button from '../../../components/Button'
 import NavigationContext from '../../../datamanager/context/navigationContext'
 import styles from '../styles/navbar.module.css'
-import { motion } from 'framer-motion'
 import { BsJustify } from 'react-icons/bs'
 import { Box, Typography } from '@mui/material'
 
@@ -60,19 +59,36 @@ const Navbar = () => {
       </div>
 
       <nav className={styles.navbarNav}>
-        <a className={`${styles.navbarNavItem} ${currentElement === "home" && styles.navbarNavItemActive}`} onClick={() => handleScroll("home")}>Home</a>
-        <a className={`${styles.navbarNavItem} ${currentElement === "skills" && styles.navbarNavItemActive}`} onClick={() => handleScroll("skills")}>Skills</a>
-        <a className={`${styles.navbarNavItem} ${currentElement === "projects" && styles.navbarNavItemActive}`} onClick={() => handleScroll("projects")}>Portfolio</a>
+        <Box
+          sx={{
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+            width: "auto"
+          }}
+        >
+          <a className={`${styles.navbarNavItem} ${currentElement === "home" && styles.navbarNavItemActive}`} onClick={() => handleScroll("home")}>Home</a>
+          <a className={`${styles.navbarNavItem} ${currentElement === "skills" && styles.navbarNavItemActive}`} onClick={() => handleScroll("skills")}>Skills</a>
+          <a className={`${styles.navbarNavItem} ${currentElement === "projects" && styles.navbarNavItemActive}`} onClick={() => handleScroll("projects")}>Portfolio</a>
+        </Box>
 
-        <a onClick={() => handleScroll("contactMe")}>
-          <Button
-            type="outline"
-            color="secondary"
-            style={{ marginLeft: 50 }}
-          >
-            Contact Me
-          </Button>
-        </a>
+        <Box
+          sx={{
+            marginLeft: "20px",
+            "@media screen and (min-width: 765px)": {
+              marginLeft: "50px"
+            }
+          }}
+        >
+          <a onClick={() => handleScroll("contactMe")}>
+            <Button
+              type="outline"
+              color="secondary"
+            >
+              Contact Me
+            </Button>
+          </a>
+        </Box>
       </nav>
     </header>
   )

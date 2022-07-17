@@ -1,7 +1,7 @@
 .footer {
   width: calc(100% - 400px);
   height: 60px;
-  padding-inline: 200px;
+  padding: 0 200px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -17,21 +17,34 @@
 
 @media screen and (max-width: 1300px) {
   .footer {
-    padding-inline: 150px;
+    padding: 0 150px;
     width: calc(100% - 300px);
   }
 }
 
 @media screen and (max-width: 1100px) {
   .footer {
-    padding-inline: 100px;
+    padding: 0 100px;
     width: calc(100% - 200px);
   }
 }
 
 @media screen and (max-width: 900px) {
   .footer {
-    padding-inline: 20px;
+    padding: 0 20px;
     width: calc(100% - 40px);
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .footer {
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 20px;
+  }
+
+  .footerLogoContainer {
+    margin-bottom: 20px;
   }
 }

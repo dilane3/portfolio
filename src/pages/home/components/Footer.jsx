@@ -13,6 +13,7 @@ const Footer = () => {
           justifyContent: "center",
           alignItems: "center"
         }}
+        className={styles.footerLogoContainer}
       >
         <img
           src={logo}

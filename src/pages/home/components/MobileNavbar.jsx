@@ -6,8 +6,8 @@ import styles from '../styles/navbar.module.css'
 import { BsX } from 'react-icons/bs'
 
 const variants = {
-  open: { opacity: 1, x: 0, y: "100%", borderRadius: 0 },
-  closed: { opacity: 0, x: "-100%", y: 0, borderRadius: "100%" },
+  open: { opacity: 1, x: 0, y: 0, borderRadius: 0 },
+  closed: { opacity: 0, x: "-100%", y: "-100%", borderRadius: "100%" },
 }
 
 const bgVariants = {

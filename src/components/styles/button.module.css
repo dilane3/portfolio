@@ -1,7 +1,6 @@
 .btn {
   width: auto;
-  padding-inline: 15px;
-  padding-block: 5px;
+  padding: 5px 15px;
   color: #fff;
   border-radius: 50px;
   border: 0;

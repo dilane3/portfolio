@@ -40,10 +40,12 @@ const Profile = () => {
           </span>
 
           <div>
-            <Button
-              color="secondary"
-              style={{ marginTop: 20, paddingInline: 25, paddingBlock: 8 }}
-            >Hire me</Button>
+            <a href="https://linkedin.com/in/dilane-kombou-6824b2207/" target="_blank">
+              <Button
+                color="secondary"
+                style={{ marginTop: 20, paddingInline: 25, paddingBlock: 8 }}
+              >Hire me</Button>
+            </a>
           </div>
         </div>
 
