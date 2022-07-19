@@ -17,9 +17,22 @@
   top: 0;
   width: 300px;
   height: 100vh;
-  background: #fff;
+  background-color: var(--home-bg-color);
   z-index: 20;
   opacity: 0;
+}
+
+.mobileMenuHeader {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.mobileMenuImage {
+  width: 50px;
+  height: auto;
 }
 
 .bgContainer {
@@ -71,11 +84,33 @@
 }
 
 .navbarNavMobileItem {
+  position: relative;
   margin-bottom: 20px;
+  transition: all 0.3s;
 }
 
 .navbarNavItem:hover {
   color: var(--primary-color);
+}
+
+.navbarNavMobileItem::before {
+  transition: all 0.3s;
+}
+
+.navbarNavMobileItem:hover::before {
+  content: "";
+  position: absolute;
+  width: 200px;
+  height: 40px;
+  top: -8px;
+  left: -5px;
+  background-color: var(--primary-color);
+  opacity: 0.2;
+  border-radius: 10px;
+}
+
+.navbarNavMobileItem:hover {
+  padding-left: 10px;
 }
 
 .navbarNavItemActive {
