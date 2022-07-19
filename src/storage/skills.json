@@ -36,6 +36,11 @@
       "image": "express.png"
     },
     {
+      "name": "Firebase",
+      "level": "3",
+      "image": "firebase.webp"
+    },
+    {
       "name": "MongoDB",
       "level": "3",
       "image": "mongo.jpg"

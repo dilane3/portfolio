@@ -39,7 +39,7 @@ const Projects = () => {
 
       <div className={styles.projectsList}>
         {
-          PROJECTS_DATA.map((project, index) => {
+          PROJECTS_DATA.slice(0, 3).map((project, index) => {
             return (
               <ProjectItem key={index} data={project} />
             )

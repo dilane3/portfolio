@@ -74,6 +74,220 @@
         "findword4.png",
         "findword5.png"
       ]
+    },
+    {
+      "name": "MusikApp",
+      "description": "A music app where you can search for songs and play them.",
+      "start_date": "2021-10-02",
+      "end_date": "2021-10-16",
+      "status": "ended",
+      "url": "https://musikapp.vercel.app",
+      "users": [
+        {
+          "name": "Dilane3",
+          "email": "Komboudilane125@gmail.com"
+        }
+      ],
+      "technologies": [
+        {
+          "name": "JavaScript",
+          "image": "js.jpeg"
+        },
+        {
+          "name": "React",
+          "image": "react.png"
+        },
+        {
+          "name": "NodeJs",
+          "image": "node.png"
+        },
+        {
+          "name": "ExpressJs",
+          "image": "express.png"
+        },
+        {
+          "name": "MongoDB",
+          "image": "mongo.jpg"
+        }
+      ],
+      "folder": "musikapp",
+      "images": [
+        "musikapp 1.png",
+        "musikapp 2.png",
+        "musikapp 3.png",
+        "musikapp 4.png",
+        "musikapp 5.png"
+      ]
+    },
+    {
+      "name": "Chat App",
+      "description": "A chat app where you can create a room and chat with your friends.",
+      "start_date": "2021-11-17",
+      "end_date": "2021-11-26",
+      "status": "ended",
+      "url": "https://chat-room-server-app.herokuapp.com/login",
+      "users": [
+        {
+          "name": "Dilane3",
+          "email": "Komboudilane125@gmail.com"
+        }
+      ],
+      "technologies": [
+        {
+          "name": "Html",
+          "image": "html.png"
+        },
+        {
+          "name": "Css",
+          "image": "css.png"
+        },
+        {
+          "name": "JavaScript",
+          "image": "js.jpeg"
+        },
+        {
+          "name": "NodeJs",
+          "image": "node.png"
+        },
+        {
+          "name": "ExpressJs",
+          "image": "express.png"
+        }
+      ],
+      "folder": "chat",
+      "images": [
+        "chat 1.png",
+        "chat 2.png",
+        "chat 3.png",
+        "chat 4.png",
+        "chat 5.png"
+      ]
+    },
+    {
+      "name": "Weather Lite",
+      "description": "A mobile app that shows the weather of a city, using the localization feature or the search functionality.",
+      "start_date": "2022-02-01",
+      "end_date": "2022-02-15",
+      "status": "ended",
+      "url": "https://github.com/dilane3/weather-app",
+      "users": [
+        {
+          "name": "Dilane3",
+          "email": "Komboudilane125@gmail.com"
+        }
+      ],
+      "technologies": [
+        {
+          "name": "React Native",
+          "image": "react.png"
+        },
+        {
+          "name": "JavaScript",
+          "image": "js.jpeg"
+        }
+      ],
+      "folder": "weatherLite",
+      "images": [
+        "weatherLite 1.jpg",
+        "weatherLite 2.jpg",
+        "weatherLite 3.jpg",
+        "weatherLite 4.jpg",
+        "weatherLite 5.jpg"
+      ]
+    },
+    {
+      "name": "Bteach",
+      "description": "A service sells platform where repeaters can sell their services to students and be hired.",
+      "start_date": "2022-03-01",
+      "end_date": "2022-03-31",
+      "status": "ended",
+      "url": "https://bteach-server.web.app/",
+      "users": [
+        {
+          "name": "Dilane3",
+          "email": "Komboudilane125@gmail.com"
+        }
+      ],
+      "technologies": [
+        {
+          "name": "React",
+          "image": "react.png"
+        },
+        {
+          "name": "JavaScript",
+          "image": "js.jpeg"
+        },
+        {
+          "name": "Firebase",
+          "image": "firebase.webp"
+        }
+      ],
+      "folder": "bteach",
+      "images": [
+        "bteach 1.png",
+        "bteach 2.png",
+        "bteach 3.png",
+        "bteach 4.png",
+        "bteach 5.png",
+        "bteach 6.png",
+        "bteach 7.png",
+        "bteach 8.png",
+        "bteach 9.png",
+        "bteach 10.png",
+        "bteach 11.png"
+      ]
+    },
+    {
+      "name": "Course Programs",
+      "description": "A platform where admins of the University of Yaounde I can schedule courses for the students and teachers for one specific semester",
+      "start_date": "2022-04-18",
+      "end_date": "2022-06-07",
+      "status": "ended",
+      "url": "https://github.com/ngimdock/planing",
+      "users": [
+        {
+          "name": "Dilane3",
+          "email": "Komboudilane125@gmail.com"
+        }
+      ],
+      "technologies": [
+        {
+          "name": "React",
+          "image": "react.png"
+        },
+        {
+          "name": "JavaScript",
+          "image": "js.jpeg"
+        },
+        {
+          "name": "NodeJs",
+          "image": "node.png"
+        },
+        {
+          "name": "ExpressJs",
+          "image": "express.png"
+        },
+        {
+          "name": "MySql",
+          "image": "mysql.svg"
+        }
+      ],
+      "folder": "coursePrograms",
+      "images": [
+        "coursePrograms 1.png",
+        "coursePrograms 2.png",
+        "coursePrograms 3.png",
+        "coursePrograms 4.png",
+        "coursePrograms 5.png",
+        "coursePrograms 6.png",
+        "coursePrograms 7.png",
+        "coursePrograms 8.png",
+        "coursePrograms 9.png",
+        "coursePrograms 10.png",
+        "coursePrograms 11.png",
+        "coursePrograms 12.png",
+        "coursePrograms 13.png"
+      ]
     }
   ]
 }
