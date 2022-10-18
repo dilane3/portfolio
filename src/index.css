@@ -30,6 +30,7 @@ html {
 }
 
 body {
+  position: relative;
   margin: 0;
   font-family: "Nunito-Regular";
   -webkit-font-smoothing: antialiased;

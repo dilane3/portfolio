@@ -36,6 +36,11 @@
       "image": "express.png"
     },
     {
+      "name": "NestJS",
+      "level": "3",
+      "image": "nestjs.webp"
+    },
+    {
       "name": "Firebase",
       "level": "3",
       "image": "firebase.webp"

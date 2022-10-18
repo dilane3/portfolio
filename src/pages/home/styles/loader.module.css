@@ -1,0 +1,58 @@
+.loaderContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--home-bg-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.loaderHidden {
+  opacity: 0;
+}
+
+.logoBorder {
+  position: absolute;
+  transform: scale(1.5);
+  animation: animation-rotate 0.8s infinite linear;
+}
+
+.logo {
+  animation: loader 1.6s infinite linear;
+}
+
+@keyframes animation-rotate {
+  0% {
+    transform: scale(1.5) rotate(0deg);
+  }
+
+  50% {
+    transform: scale(1) rotate(180deg);
+  }
+
+  100% {
+    transform: scale(1.5) rotate(360deg);
+  }
+}
+
+@keyframes loader {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
