@@ -23,14 +23,8 @@ const Home = () => {
   }, [])
 
   useEffect(() => {
-    window.addEventListener('load', () => {
+    window.onload = () => {
       setShowLoader(false)
-    })
-
-    return () => {
-      window.removeEventListener('load', () => {
-        setShowLoader(false)
-      })
     }
   }, [])
 
