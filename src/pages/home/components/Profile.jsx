@@ -5,6 +5,8 @@ import styles from '../styles/profile.module.css'
 import { useInView } from 'framer-motion'
 import { useContext, useEffect, useRef } from 'react'
 import NavigationContext from '../../../datamanager/context/navigationContext'
+import ThemeContext from '../../../datamanager/context/themeContext'
+import { getThemeColor } from '../../../utils/colors'
 
 const profileImage = require("../../../assets/images/profile.png")
 const reactImage = require("../../../assets/images/react.png")
@@ -13,6 +15,7 @@ const nodeImage = require("../../../assets/images/node.png")
 const Profile = () => {
   // Get data from the global state
   const { navigateTo } = useContext(NavigationContext)
+  const { theme } = useContext(ThemeContext);
 
   const profileRef = useRef()
   const isInView = useInView(profileRef)
@@ -28,6 +31,9 @@ const Profile = () => {
       ref={profileRef}
       id="home"
       className={styles.profileContainer}
+      style={{
+        background: getThemeColor(theme).home
+      }}
     >
       <div className={styles.profileFirstSection}>
         <div className={styles.profilePresentation}>

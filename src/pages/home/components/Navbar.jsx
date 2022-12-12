@@ -4,12 +4,15 @@ import NavigationContext from '../../../datamanager/context/navigationContext'
 import styles from '../styles/navbar.module.css'
 import { BsJustify } from 'react-icons/bs'
 import { Box, Typography } from '@mui/material'
+import ThemeContext from '../../../datamanager/context/themeContext'
+import { saveTheme } from '../../../storage'
 
 const logo = require("../../../assets/images/logo.png")
 
 const Navbar = () => {
   // Get data from global state
   const { currentElement, openMenu, closeMenu, open } = useContext(NavigationContext)
+  const { theme, setTheme } = useContext(ThemeContext)
 
   // Set local state
   const [isOpen, setIsOpen] = useState(false)
@@ -18,6 +21,21 @@ const Navbar = () => {
     const targetElement = document.getElementById(target)
 
     targetElement.scrollIntoView({ behavior: "smooth" })
+  }
+
+  const handleSetTheme = () => {
+    let newTheme = ''
+
+    if (theme === 'light') {
+      newTheme = 'dark'
+    } else {
+      newTheme = 'light'
+    }
+
+    
+    setTheme(newTheme);
+    saveTheme(newTheme);
+    console.log(newTheme)
   }
 
   return (
@@ -75,11 +93,24 @@ const Navbar = () => {
         <Box
           sx={{
             marginLeft: "20px",
+            display: "flex",
+            alignItems: "center",
+            flexDirection: "row",
             "@media screen and (min-width: 765px)": {
               marginLeft: "50px"
             }
           }}
         >
+          <Box
+            sx={{
+              marginRight: "20px",
+              background: 'red'
+            }}
+            onClick={handleSetTheme}
+          >
+            { theme }
+          </Box>
+
           <a onClick={() => handleScroll("contactMe")}>
             <Button
               type="outline"

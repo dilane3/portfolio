@@ -12,10 +12,15 @@ import Skills from './components/Skills'
 import styles from './styles/home.module.css'
 import ReactGa from 'react-ga'
 import { LoaderPage } from './components/Loader'
+import { useGetTheme } from '../../hooks/useGetTheme'
+import ThemeContext from '../../datamanager/context/themeContext'
 
 const Home = () => {
   const { open: modalOpen, closeModal } = useContext(ModalContext)
+  const { setTheme } = useContext(ThemeContext)
   const [showLoader, setShowLoader] = useState(true)
+  
+  const [theme, loading] = useGetTheme()
 
   useEffect(() => {
     ReactGa.initialize('UA-234891814-1')
@@ -23,10 +28,17 @@ const Home = () => {
   }, [])
 
   useEffect(() => {
-    window.onload = () => {
-      setShowLoader(false)
+    if (theme) {
+      console.log({ theme, loading })
+      setTheme(theme);
     }
-  }, [])
+  }, [showLoader, loading])
+
+  useEffect(() => {
+    window.onload = () => {
+      setShowLoader(false);
+    }
+  }, [loading])
 
   return (
     <section
