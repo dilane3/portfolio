@@ -5,6 +5,8 @@ import Button from '../../../components/Button'
 import SkillItem from '../../../components/Skill'
 import ModalContext from '../../../datamanager/context/modalContext'
 import NavigationContext from '../../../datamanager/context/navigationContext'
+import ThemeContext from '../../../datamanager/context/themeContext'
+import { getThemeColor } from '../../../utils/colors'
 import styles from '../styles/skills.module.css'
 
 const SKILLS_DATA = require("../../../storage/skills.json").skills
@@ -13,6 +15,7 @@ const Skills = () => {
   // Get data from the global state
   const { openModal } = useContext(ModalContext)
   const { navigateTo } = useContext(NavigationContext)
+  const { theme } = useContext(ThemeContext)
 
   const skillsRef = useRef()
   const isInView = useInView(skillsRef)
@@ -29,9 +32,19 @@ const Skills = () => {
       id="skills"
       className={styles.skillsSection}
     >
-      <h1 className={styles.skillsHeading}>Skills</h1>
+      <h1 
+        className={styles.skillsHeading}
+        style={{
+          color: getThemeColor(theme).text
+        }}  
+      >Skills</h1>
 
-      <span className={styles.skillsDescription}>
+      <span 
+        className={styles.skillsDescription}
+        style={{
+          color: getThemeColor(theme).lightText
+        }}  
+      >
         I’m specialized in web development. I do frontend and backend applications both using javascripts.<br />
         Here is my tech list.
       </span>

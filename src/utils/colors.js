@@ -8,6 +8,7 @@ export const LIGHT_TEXT_DARK = "#555"
 export const BOX_LIGHT = "#fff"
 export const YELLOW_COLOR = "#FB8500"
 export const WHITE_COLOR = "#fff"
+export const FOOTER_COLOR = "#535787"
 
 // Dark colors
 export const HOME_BG_DARK_COLOR = "#001523"
@@ -24,7 +25,8 @@ export const Colors = {
     text: TEXT_DARK,
     lightText: LIGHT_TEXT_DARK,
     box: BOX_LIGHT,
-    bg: WHITE_COLOR
+    bg: WHITE_COLOR,
+    footer: FOOTER_COLOR
   },
   dark: {
     home: `linear-gradient(to bottom, ${HOME_BG_DARK_COLOR} 50%, ${HOME_DARK})`,
@@ -32,7 +34,8 @@ export const Colors = {
     text: TEXT_LIGHT,
     lightText: LIGHT_TEXT_LIGHT,
     box: BOX_DARK,
-    bg: BG_DARK_COLOR
+    bg: BG_DARK_COLOR,
+    footer: HOME_BG_DARK_COLOR
   }
 }
 

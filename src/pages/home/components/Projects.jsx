@@ -5,6 +5,8 @@ import Button from '../../../components/Button'
 import ProjectItem from '../../../components/Project'
 import ModalContext from '../../../datamanager/context/modalContext'
 import NavigationContext from '../../../datamanager/context/navigationContext'
+import ThemeContext from '../../../datamanager/context/themeContext'
+import { getThemeColor } from '../../../utils/colors'
 import styles from '../styles/projects.module.css'
 
 const PROJECTS_DATA = require("../../../storage/projects.json").projects
@@ -13,6 +15,7 @@ const Projects = () => {
   // Get data from the global state
   const { openModal } = useContext(ModalContext)
   const { navigateTo } = useContext(NavigationContext)
+  const { theme } = useContext(ThemeContext)
 
   const projectsRef = useRef()
   const isInView = useInView(projectsRef)
@@ -30,9 +33,19 @@ const Projects = () => {
       id="projects"
       className={styles.projectsSection}
     >
-      <h1 className={styles.projectsHeading}>Projects</h1>
+      <h1 
+        className={styles.projectsHeading}
+        style={{
+          color: getThemeColor(theme).text
+        }}  
+      >Projects</h1>
 
-      <span className={styles.projectsD4escription}>
+      <span 
+        className={styles.projectsD4escription}
+        style={{
+          color: getThemeColor(theme).lightText
+        }}  
+      >
         Since I started working as a web developer I worked on many projects. <br />
         Let’s dive into this now.
       </span>

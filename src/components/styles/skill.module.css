@@ -13,10 +13,10 @@
   justify-content: space-around;
   margin-right: 30px;
   margin-bottom: 30px;
-  /* z-index: 2; */
+  z-index: 2 !important;
 }
 
-.skillItemAfter {
+.skillItemBefore {
   content: "";
   position: absolute;
   top: -3px;
@@ -28,10 +28,10 @@
   padding: 15px;
   border: 1px solid #ccc;
   background-color: #fff;
-  z-index: -1;
+  z-index: -2 !important;
 }
 
-.skillItemBefore {
+.skillItemAfter {
   content: "";
   position: absolute;
   top: -5px;
@@ -43,7 +43,7 @@
   padding: 15px;
   border: 1px solid #ccc;
   background-color: #fff;
-  z-index: -2;
+  z-index: -3 !important;
 }
 
 .skillImage {
