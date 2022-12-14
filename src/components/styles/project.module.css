@@ -5,7 +5,6 @@
   height: auto;
   min-height: 400px;
   background-color: rgb(247, 247, 247);
-  box-shadow: 0 3px 3px #c4c4c4;
   transition: all 0.3s ease-in-out;
   border: 1px solid #f8f8f8;
   margin-inline: 10px;
@@ -14,7 +13,6 @@
 
 .projectItem:hover {
   transform: scale(1.05);
-  box-shadow: 0 3px 15px #c4c4c4;
 }
 
 .projectItemImageContainer {

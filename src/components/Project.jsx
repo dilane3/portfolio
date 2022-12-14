@@ -1,6 +1,9 @@
+import { Box } from '@mui/material'
 import { useContext } from 'react'
 import { VscEye } from 'react-icons/vsc'
 import ModalContext from '../datamanager/context/modalContext'
+import ThemeContext from '../datamanager/context/themeContext'
+import { getThemeColor, LIGHT_TEXT_DARK, LIGHT_TEXT_LIGHT } from '../utils/colors'
 import { splitText } from '../utils/splitText'
 import ImageCarousel from './Carousel'
 import ProjectTechList from './ProjectTechList'
@@ -17,10 +20,24 @@ const ProjectItem = ({ data }) => {
     images: projectImages
   } = data
 
+  // Get data from global state
+  const { theme } = useContext(ThemeContext)
+
   const { openModal } = useContext(ModalContext)
 
   return (
-    <div className={styles.projectItem}>
+    <Box className={styles.projectItem}
+      style={{
+        background: getThemeColor(theme).box,
+        border: `1px solid ${theme === 'light' ? "#ccc" : "#aaa"}`,
+      }}
+      sx={{
+        "&:hover": {
+          boxShadow: `0 3px 15px ${theme === "dark" ? LIGHT_TEXT_DARK : LIGHT_TEXT_LIGHT}`
+        },
+        boxShadow: `0 3px 3px ${theme === "dark" ? LIGHT_TEXT_DARK : LIGHT_TEXT_LIGHT}`
+      }}
+    >
       <div className={styles.projectItemImageContainer}>
         <ImageCarousel folder={projectFolder} images={projectImages} />
       </div>
@@ -40,7 +57,7 @@ const ProjectItem = ({ data }) => {
           <VscEye size={20} style={{ marginLeft: 5 }} />
         </span>
       </div>
-    </div>
+    </Box>
   )
 }
 
