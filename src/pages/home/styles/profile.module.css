@@ -33,6 +33,10 @@
   font-family: "Nunito-Bold";
 }
 
+.l {
+  color: #b3c5d1;
+}
+
 .profileNames {
   color: var(--primary-color);
 }

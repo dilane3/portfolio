@@ -6,7 +6,6 @@ const ThemeProvider = ({ children }) => {
   const [theme, setTheme] = useState('light');
 
   const handleSetTheme = (theme) => {
-    console.log('hellllllllllllo')
     setTheme(theme)
   }
 

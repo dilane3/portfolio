@@ -37,9 +37,19 @@ const Profile = () => {
     >
       <div className={styles.profileFirstSection}>
         <div className={styles.profilePresentation}>
-          <span className={styles.profileGreetings}>Hi, I Am</span>
+          <span 
+            className={styles.profileGreetings}
+            style={{
+              color: getThemeColor(theme).text
+            }}
+          >Hi, I Am</span>
           <span className={styles.profileNames}>Kombou Dilane</span>
-          <span className={styles.profileDescription}>
+          <span 
+            className={styles.profileDescription}
+            style={{
+              color: getThemeColor(theme).lightText
+            }}  
+          >
             A fullstack javascript developer. I like building
             software solution to resolve real problem
             using javascript technologies

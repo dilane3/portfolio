@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react"
 import { getTheme } from "../storage";
 
-export const useGetTheme = () => {
-  const [theme, setTheme] = useState('');
+export const useGetTheme = (value) => {
+  const [theme, setTheme] = useState(value);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {

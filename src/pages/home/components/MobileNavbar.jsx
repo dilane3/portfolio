@@ -6,6 +6,10 @@ import styles from '../styles/navbar.module.css'
 import { BsX } from 'react-icons/bs'
 import Button from "../../../components/Button"
 import SocialLogo from "../../../components/SocialLogo"
+import ThemeContext from "../../../datamanager/context/themeContext"
+import { getThemeColor } from "../../../utils/colors"
+import { ThemeButton } from "../../../components/ThemeButton"
+import { saveTheme } from "../../../storage"
 
 const variants = {
   open: { opacity: 1, x: 0, y: 0, borderRadius: 0 },
@@ -20,6 +24,7 @@ const bgVariants = {
 const MobileNavbar = () => {
   // Get data from global state
   const { currentElement, open: isOpen, closeMenu } = useContext(NavigationContext)
+  const { theme, setTheme } = useContext(ThemeContext)
 
   // Some handlers
   const handleScroll = (target) => {
@@ -30,6 +35,20 @@ const MobileNavbar = () => {
     closeMenu()
   }
 
+  const handleSetTheme = () => {
+    let newTheme = ''
+
+    if (theme === 'light') {
+      newTheme = 'dark'
+    } else {
+      newTheme = 'light'
+    }
+
+    
+    setTheme(newTheme);
+    saveTheme(newTheme);
+  }
+
   return (
     <>
       <motion.nav
@@ -37,6 +56,9 @@ const MobileNavbar = () => {
         transition={{ duration: .5 }}
         variants={variants}
         className={styles.mobileMenuContainer}
+        style={{
+          background: getThemeColor(theme).navbar
+        }}
       >
         <Box
           sx={{
@@ -66,8 +88,15 @@ const MobileNavbar = () => {
                   fontFamily: "Nunito-Bold",
                   color: "var(--primary-color)",
                   marginLeft: "0.5rem",
+                  marginRight: "1rem"
                 }}
               >Dilane3</Typography>
+
+              <ThemeButton 
+                theme={theme}
+                onClick={handleSetTheme}
+                id={styles.themeButtonMobile}
+              />
             </Box>
 
             <Box
@@ -86,7 +115,10 @@ const MobileNavbar = () => {
               }}
               onClick={closeMenu}
             >
-              <BsX size={25} />
+              <BsX 
+                size={25} 
+                color={getThemeColor(theme).text}  
+              />
             </Box>
           </Box>
 
@@ -99,9 +131,27 @@ const MobileNavbar = () => {
             }}
           >
             <nav className={styles.navbarNavMobile}>
-              <a className={`${styles.navbarNavMobileItem} ${currentElement === "home" && styles.navbarNavItemActive}`} onClick={() => handleScroll("home")}>Home</a>
-              <a className={`${styles.navbarNavMobileItem} ${currentElement === "skills" && styles.navbarNavItemActive}`} onClick={() => handleScroll("skills")}>Skills</a>
-              <a className={`${styles.navbarNavMobileItem} ${currentElement === "projects" && styles.navbarNavItemActive}`} onClick={() => handleScroll("projects")}>Portfolio</a>
+              <a 
+                className={`${styles.navbarNavMobileItem} ${currentElement === "home" && styles.navbarNavItemActive}`} 
+                onClick={() => handleScroll("home")}
+                style={{
+                  color: getThemeColor(theme).text
+                }}
+              >Home</a>
+              <a 
+                className={`${styles.navbarNavMobileItem} ${currentElement === "skills" && styles.navbarNavItemActive}`} 
+                onClick={() => handleScroll("skills")}
+                style={{
+                  color: getThemeColor(theme).text
+                }}
+              >Skills</a>
+              <a 
+                className={`${styles.navbarNavMobileItem} ${currentElement === "projects" && styles.navbarNavItemActive}`} 
+                onClick={() => handleScroll("projects")}
+                style={{
+                  color: getThemeColor(theme).text
+                }}
+              >Portfolio</a>
             </nav>
 
             <Box

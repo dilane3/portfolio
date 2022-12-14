@@ -14,13 +14,17 @@ import ReactGa from 'react-ga'
 import { LoaderPage } from './components/Loader'
 import { useGetTheme } from '../../hooks/useGetTheme'
 import ThemeContext from '../../datamanager/context/themeContext'
+import { getThemeColor } from '../../utils/colors'
 
 const Home = () => {
+  // Get data from global state
   const { open: modalOpen, closeModal } = useContext(ModalContext)
-  const { setTheme } = useContext(ThemeContext)
+  const { theme, setTheme } = useContext(ThemeContext)
+
+  // Local state
   const [showLoader, setShowLoader] = useState(true)
   
-  const [theme, loading] = useGetTheme()
+  const [savedTheme, loading] = useGetTheme('light')
 
   useEffect(() => {
     ReactGa.initialize('UA-234891814-1')
@@ -28,9 +32,8 @@ const Home = () => {
   }, [])
 
   useEffect(() => {
-    if (theme) {
-      console.log({ theme, loading })
-      setTheme(theme);
+    if (savedTheme) {
+      setTheme(savedTheme);
     }
   }, [showLoader, loading])
 
@@ -43,6 +46,9 @@ const Home = () => {
   return (
     <section
       className={styles.container}
+      style={{
+        backgroundColor: getThemeColor(theme).bg
+      }}
     >
       <LoaderPage show={showLoader} />
 

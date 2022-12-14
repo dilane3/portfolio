@@ -71,13 +71,20 @@
   flex-direction: column;
 }
 
+.themeButton {
+  display: flex !important;
+}
+
+.themeButtonMobile {
+  display: none !important;
+}
+
 .navbarNavItem,
 .navbarNavMobileItem {
   min-width: 80px;
   width: auto;
   margin-right: 25px;
   text-decoration: none;
-  color: #333;
   font-family: "Nunito-Bold";
   transition: color 0.2s;
   cursor: pointer;
@@ -114,7 +121,7 @@
 }
 
 .navbarNavItemActive {
-  color: var(--primary-color);
+  color: var(--primary-color) !important;
 }
 
 @media screen and (max-width: 1300px) {
@@ -141,5 +148,13 @@
 @media screen and (max-width: 765px) {
   .navbarNavItem {
     display: none;
+  }
+
+  .themeButton {
+    display: none !important;
+  }
+
+  .themeButtonMobile {
+    display: flex !important;
   }
 }

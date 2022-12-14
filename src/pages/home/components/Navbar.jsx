@@ -6,6 +6,8 @@ import { BsJustify } from 'react-icons/bs'
 import { Box, Typography } from '@mui/material'
 import ThemeContext from '../../../datamanager/context/themeContext'
 import { saveTheme } from '../../../storage'
+import { getThemeColor } from '../../../utils/colors'
+import { ThemeButton } from '../../../components/ThemeButton'
 
 const logo = require("../../../assets/images/logo.png")
 
@@ -35,11 +37,15 @@ const Navbar = () => {
     
     setTheme(newTheme);
     saveTheme(newTheme);
-    console.log(newTheme)
   }
 
   return (
-    <header className={styles.navbar}>
+    <header 
+      className={styles.navbar}
+      style={{
+        background: getThemeColor(theme).navbar
+      }}  
+    >
 
       <div className={styles.navbarLogo}>
         <Box
@@ -85,9 +91,27 @@ const Navbar = () => {
             width: "auto"
           }}
         >
-          <a className={`${styles.navbarNavItem} ${currentElement === "home" && styles.navbarNavItemActive}`} onClick={() => handleScroll("home")}>Home</a>
-          <a className={`${styles.navbarNavItem} ${currentElement === "skills" && styles.navbarNavItemActive}`} onClick={() => handleScroll("skills")}>Skills</a>
-          <a className={`${styles.navbarNavItem} ${currentElement === "projects" && styles.navbarNavItemActive}`} onClick={() => handleScroll("projects")}>Portfolio</a>
+          <a 
+            className={`${styles.navbarNavItem} ${currentElement === "home" && styles.navbarNavItemActive}`} 
+            onClick={() => handleScroll("home")}
+            style={{
+              color: getThemeColor(theme).text
+            }}
+          >Home</a>
+          <a 
+            className={`${styles.navbarNavItem} ${currentElement === "skills" && styles.navbarNavItemActive}`} 
+            onClick={() => handleScroll("skills")}
+            style={{
+              color: getThemeColor(theme).text
+            }}
+          >Skills</a>
+          <a 
+            className={`${styles.navbarNavItem} ${currentElement === "projects" && styles.navbarNavItemActive}`} 
+            onClick={() => handleScroll("projects")}
+            style={{
+              color: getThemeColor(theme).text
+            }}
+          >Portfolio</a>
         </Box>
 
         <Box
@@ -101,15 +125,11 @@ const Navbar = () => {
             }
           }}
         >
-          <Box
-            sx={{
-              marginRight: "20px",
-              background: 'red'
-            }}
+          <ThemeButton 
+            theme={theme}
             onClick={handleSetTheme}
-          >
-            { theme }
-          </Box>
+            id={styles.themeButton}
+          />
 
           <a onClick={() => handleScroll("contactMe")}>
             <Button
