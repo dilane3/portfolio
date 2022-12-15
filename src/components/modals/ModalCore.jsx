@@ -6,9 +6,12 @@ import ModalContext from '../../datamanager/context/modalContext'
 import SkillsContentModal from "./components/skillsContentModal"
 import ProjectsContentModal from "./components/projectsContentModal"
 import SpecificProjectContentModal from "./components/specificProjectContentModal"
+import ThemeContext from "../../datamanager/context/themeContext"
+import { getThemeColor } from "../../utils/colors"
 
 const ModalCore = ({ open, onClose }) => {
   const { modalData: { modalTitle, modalType } } = useContext(ModalContext)
+  const { theme } = useContext(ThemeContext)
 
   // Some handlers
   const handleGenerateModalContent = () => {
@@ -36,12 +39,17 @@ const ModalCore = ({ open, onClose }) => {
     >
       <Box
         sx={{
-          backgroundColor: "#fff"
+          backgroundColor: getThemeColor(theme).bg
         }}
         className={styles.modalContainer}
       >
         <header className={styles.modalHeader}>
-          <h1 className={styles.modalHeaderTitle}>{modalTitle}</h1>
+          <h1 
+            className={styles.modalHeaderTitle}
+            style={{
+              color: getThemeColor(theme).text
+            }}
+          >{modalTitle}</h1>
         </header>
 
         <main className={styles.modalMain}>
