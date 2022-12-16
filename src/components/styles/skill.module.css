@@ -13,7 +13,7 @@
   justify-content: space-around;
   margin-right: 30px;
   margin-bottom: 30px;
-  z-index: 2 !important;
+  z-index: 1;
 }
 
 .skillItemBefore {
@@ -28,7 +28,7 @@
   padding: 15px;
   border: 1px solid #ccc;
   background-color: #fff;
-  z-index: -2 !important;
+  z-index: -1;
 }
 
 .skillItemAfter {
@@ -43,7 +43,7 @@
   padding: 15px;
   border: 1px solid #ccc;
   background-color: #fff;
-  z-index: -3 !important;
+  z-index: -1;
 }
 
 .skillImage {

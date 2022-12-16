@@ -28,7 +28,6 @@ const SkillItem = ({ data }) => {
   return (
     <motion.div
       className={styles.skillItem}
-      // whileHover={{ scale: 1.02 }}
       onHoverStart={handleHoverStart}
       onHoverEnd={handleHoverEnd}
       style={{
