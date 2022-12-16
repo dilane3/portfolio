@@ -6,9 +6,12 @@ import { BsAlarm, BsLink } from 'react-icons/bs'
 import { formatDate } from '../../../utils/formatDate'
 import ProjectTechList from '../../ProjectTechList'
 import { Box, Typography } from '@mui/material'
+import { getThemeColor, PRIMARY_COLOR } from '../../../utils/colors'
+import ThemeContext from '../../../datamanager/context/themeContext'
 
 const SpecificProjectContentModal = () => {
   const { modalData: { project } } = useContext(ModalContext)
+  const { theme } = useContext(ThemeContext)
 
   const {
     description: projectDescription,
@@ -29,7 +32,12 @@ const SpecificProjectContentModal = () => {
         />
       </div>
 
-      <div className={styles.projectDescription}>
+      <div 
+        className={styles.projectDescription}
+        style={{
+          color: getThemeColor(theme).text
+        }}  
+      >
         {projectDescription}
       </div>
 
@@ -37,19 +45,50 @@ const SpecificProjectContentModal = () => {
         <div className={styles.projectDateItem}>
           <BsAlarm size={20} style={{ color: "var(--secondary-color)" }} />
 
-          <span>Start Date: <span className={styles.projectDateValue}>{formatDate(projectStartDate)}</span></span>
+          <span
+            style={{
+              color: getThemeColor(theme).text
+            }}
+          >
+            Start Date: 
+            <span 
+              className={styles.projectDateValue}
+              style={{
+                color: getThemeColor(theme).text
+              }}  
+            >{formatDate(projectStartDate)}</span>
+          </span>
         </div>
 
         <div className={styles.projectDateItem}>
           <BsAlarm size={20} style={{ color: "var(--secondary-color)" }} />
 
-          <span>End Date: <span className={styles.projectDateValue}>{formatDate(projectEndDate)}</span></span>
+          <span
+            style={{
+              color: getThemeColor(theme).text
+            }}
+          >
+            End Date: 
+            <span 
+              className={styles.projectDateValue}
+              style={{
+                color: getThemeColor(theme).text
+              }}
+            >{formatDate(projectEndDate)}</span>
+          </span>
         </div>
 
         <div className={styles.projectDateItem}>
           <BsLink size={25} style={{ color: "var(--primary-color)" }} />
 
-          <a href={projectUrl} target="_blank" rel="noopener noreferrer">Open Project</a>
+          <a 
+            href={projectUrl} 
+            target="_blank" 
+            rel="noopener noreferrer"
+            style={{
+              color: PRIMARY_COLOR
+            }}
+          >Open Project</a>
         </div>
 
         <div style={{ marginTop: "60px", marginBottom: "20px" }}>
