@@ -36,15 +36,15 @@ const Profile = () => {
       }}
     >
       <div className={styles.profileFirstSection}>
-        <div className={styles.profilePresentation}>
-          <span 
+        <section className={styles.profilePresentation}>
+          <h1 
             className={styles.profileGreetings}
             style={{
               color: getThemeColor(theme).text
             }}
-          >Hi, I Am</span>
-          <span className={styles.profileNames}>Kombou Dilane</span>
-          <span 
+          >Hi, I Am</h1>
+          <h1 className={styles.profileNames}>Kombou Dilane</h1>
+          <h2 
             className={styles.profileDescription}
             style={{
               color: getThemeColor(theme).lightText
@@ -53,17 +53,17 @@ const Profile = () => {
             A fullstack javascript developer. I like building
             software solution to resolve real problem
             using javascript technologies
-          </span>
+          </h2>
 
-          <div>
+          <section>
             <a href="https://linkedin.com/in/dilane-kombou-6824b2207/" target="_blank">
               <Button
                 color="secondary"
                 style={{ marginTop: 20, paddingInline: 25, paddingBlock: 8 }}
               >Hire me</Button>
             </a>
-          </div>
-        </div>
+          </section>
+        </section>
 
         <div className={styles.profileSocial}>
           <SocialLogo style={{ boxShadow: "0 3px 5px #ccc" }} />

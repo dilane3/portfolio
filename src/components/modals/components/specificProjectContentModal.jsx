@@ -24,7 +24,7 @@ const SpecificProjectContentModal = () => {
   } = project
 
   return (
-    <div className={styles.contentModal}>
+    <section className={styles.contentModal}>
       <div className={styles.imagesContainer}>
         <ImageCarousel
           images={projectImages}
@@ -32,14 +32,14 @@ const SpecificProjectContentModal = () => {
         />
       </div>
 
-      <div 
+      <h2 
         className={styles.projectDescription}
         style={{
           color: getThemeColor(theme).text
         }}  
       >
         {projectDescription}
-      </div>
+      </h2>
 
       <div className={styles.projectDates}>
         <div className={styles.projectDateItem}>
@@ -95,7 +95,7 @@ const SpecificProjectContentModal = () => {
           <ProjectTechList data={projectTechnologies} />
         </div>
       </div>
-    </div>
+    </section>
   )
 }
 

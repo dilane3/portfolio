@@ -33,16 +33,16 @@ const ContactMe = () => {
         }}
       >Contact Me</h1>
 
-      <span 
+      <h2 
         className={styles.contactMeDescription}
         style={{
           color: getThemeColor(theme).lightText
         }}  
       >
         You can use different way to contact me. Choose what you want.
-      </span>
+      </h2>
 
-      <div className={styles.contactMeContent}>
+      <section className={styles.contactMeContent}>
         <div className={styles.contactMeFirstSection}>
           <ContactItem
             image="twitter.png"
@@ -58,14 +58,13 @@ const ContactMe = () => {
 
         <div className={styles.contactMeSecondSection}>
           <img
-            style={{
-              width: "500px",
-              height: "auto"
-            }}
+            alt="contact me"
+            width="500px"
+            height="auto"
             src={require(`../../../assets/images/contact-us.png`)}
           />
         </div>
-      </div>
+      </section>
     </section>
   )
 }

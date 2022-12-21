@@ -40,15 +40,15 @@ const Projects = () => {
         }}  
       >Projects</h1>
 
-      <span 
-        className={styles.projectsD4escription}
+      <h2 
+        className={styles.projectsDescription}
         style={{
           color: getThemeColor(theme).lightText
         }}  
       >
         Since I started working as a web developer I worked on many projects. <br />
         Let’s dive into this now.
-      </span>
+      </h2>
 
       <div className={styles.projectsList}>
         {

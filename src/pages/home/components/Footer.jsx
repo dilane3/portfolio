@@ -19,6 +19,7 @@ const Footer = () => {
       }}  
     >
       <Box
+        as="section"
         sx={{
           display: "flex",
           justifyContent: "center",
@@ -27,6 +28,7 @@ const Footer = () => {
         className={styles.footerLogoContainer}
       >
         <img
+          alt="Dilane3 Logo"
           src={logo}
           className={styles.footerLogo}
         />
@@ -36,9 +38,9 @@ const Footer = () => {
         </Typography>
       </Box>
 
-      <div>
+      <section>
         <SocialLogo />
-      </div>
+      </section>
     </footer>
   )
 }

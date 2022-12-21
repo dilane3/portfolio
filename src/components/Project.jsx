@@ -45,7 +45,7 @@ const ProjectItem = ({ data }) => {
       <div className={styles.projectItemContent}>
         <h1 className={styles.projectItemTitle}>{projectName}</h1>
 
-        <span className={styles.projectItemDescription} title={projectDescription}>{splitText(projectDescription, 80)}</span>
+        <h2 className={styles.projectItemDescription} title={projectDescription}>{splitText(projectDescription, 80)}</h2>
       </div>
 
       <div className={styles.projectItemFooter}>

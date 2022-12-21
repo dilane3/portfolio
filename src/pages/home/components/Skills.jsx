@@ -39,7 +39,7 @@ const Skills = () => {
         }}  
       >Skills</h1>
 
-      <span 
+      <h2 
         className={styles.skillsDescription}
         style={{
           color: getThemeColor(theme).lightText
@@ -47,7 +47,7 @@ const Skills = () => {
       >
         I’m specialized in web development. I do frontend and backend applications both using javascripts.<br />
         Here is my tech list.
-      </span>
+      </h2>
 
       <div className={styles.skillsList}>
         {
